@@ -6,15 +6,6 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket         = "terraform-statefile-prod-a"
-    key            = "terraform.tfstate"
-    region         = "us-east-1"
-    dynamodb_table = "terraform-statelock-prod"
-    encrypt        = true
-  }
-}
-
 provider "aws" {
   region = var.region
 }
