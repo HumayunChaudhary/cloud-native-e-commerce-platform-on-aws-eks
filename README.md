@@ -9,29 +9,8 @@ This project follows a modular Infrastructure as Code (IaC) approach by separati
 ## Architecture
 
 ```
-                               Internet
-                                   │
-                          Internet Gateway
-                                   │
-        ┌──────────────────────────┴──────────────────────────┐
-        │                                                     │
-┌──────────────────┐                                 ┌──────────────────┐
-│ Public Subnet A  │                                 │ Public Subnet B  │
-│                  │                                 │                  │
-│   NAT Gateway    │                                 │   NAT Gateway    │
-└────────┬─────────┘                                 └────────┬─────────┘
-         │                                                    │
-─────────┼────────────────────────── VPC ──────────────────────┼─────────
-         │                                                    │
-┌────────▼─────────┐                                 ┌────────▼─────────┐
-│ Private Subnet A │                                 │ Private Subnet B │
-│                  │                                 │                  │
-│ Managed Node     │                                 │ Managed Node     │
-│ Group            │                                 │ Group            │
-└────────┬─────────┘                                 └────────┬─────────┘
-         └──────────────────────┬──────────────────────────────┘
-                                │
-                     Amazon EKS Control Plane
+<img width="1536" height="1024" alt="eks" src="https://github.com/user-attachments/assets/2e4cb51f-f673-4957-8e9f-7db883cca801" />
+
 ```
 
 ---
